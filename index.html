@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/puzzle.css" />
+    <link rel="stylesheet" href="./assets/css/logic.css" />
+    <link rel="stylesheet" href="./assets/css/maths.css" />
+    <title>Awaraness Game</title>
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul class="Logo">
+          <li>Logo</li>
+        </ul>
+        <ul class="nav-items">
+          <li><a href="index.php">Home</a></li>
+        </ul>
+        <ul class="user">
+          user
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="main-container">
+        <div class="left-side">
+          <div class="puzzle_cont">
+            <h1>Solve Puzzle</h1>
+
+            <div class="puzzle_board">
+              <div class="puzzle-peices">
+                <button class="puzzle-peice" id="1"></button>
+                <button class="puzzle-peice" id="2"></button>
+                <button class="puzzle-peice" id="3"></button>
+                <button class="puzzle-peice" id="4"></button>
+                <button class="puzzle-peice" id="5"></button>
+                <button class="puzzle-peice" id="6"></button>
+                <button class="puzzle-peice" id="7"></button>
+                <button class="puzzle-peice" id="8"></button>
+                <button class="puzzle-peice" id="9"></button>
+                <button class="puzzle-peice" id="10"></button>
+                <button class="puzzle-peice" id="11"></button>
+                <button class="puzzle-peice" id="12"></button>
+                <button class="puzzle-peice" id="13"></button>
+                <button class="puzzle-peice" id="14"></button>
+                <button class="puzzle-peice" id="15"></button>
+                <button class="puzzle-peice" id="16"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-side">
+          <h1 class="button-opt-heading">
+            Solve puzzle using one of the options
+          </h1>
+
+          <!-- Logic part -->
+          <div class="logic">
+            <div class="logic-container">
+              <button class="exit-btn" id="exit-logic">B a c k</button>
+              <div class="left-side-cont">
+                <div class="directions">
+                  <button class="logic-dir">
+                    <i class="fa-solid fa-arrow-up rotate-left"></i>
+                  </button>
+                  <button class="logic-dir">
+                    <i class="fa-solid fa-turn-down"></i>
+                  </button>
+                  <button class="logic-dir">
+                    <i class="fa-solid fa-turn-up"></i>
+                  </button>
+                  <button class="logic-dir">
+                    <i class="fa-solid fa-repeat"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="right-side-cont">
+                <div class="logic-game-board">
+                  <span class="grid-cell" id="1"></span>
+                  <span class="grid-cell" id="2"></span>
+                  <span class="grid-cell" id="3"></span>
+                  <span class="grid-cell" id="4"></span>
+                  <span class="grid-cell" id="5"></span>
+                  <span class="grid-cell" id="6"></span>
+                  <span class="grid-cell" id="7"></span>
+                  <span class="grid-cell" id="8"></span>
+                  <span class="grid-cell" id="9"></span>
+                  <span class="grid-cell" id="10"></span>
+                  <span class="grid-cell" id="11"></span>
+                  <span class="grid-cell" id="12"></span>
+                  <span class="grid-cell" id="13"></span>
+                  <span class="grid-cell" id="14"></span>
+                  <span class="grid-cell" id="15"></span>
+                  <span class="grid-cell" id="16"></span>
+                  <span class="grid-cell" id="17"></span>
+                  <span class="grid-cell" id="18"></span>
+                  <span class="grid-cell" id="19"></span>
+                  <span class="grid-cell" id="20"></span>
+                  <span class="grid-cell" id="21"></span>
+                  <span class="grid-cell" id="22"></span>
+                  <span class="grid-cell" id="23"></span>
+                  <span class="grid-cell" id="24"></span>
+                  <span class="grid-cell" id="25"></span>
+                </div>
+
+                <div class="dir-box">
+                  <span class="play-dir"></span>
+                  <span class="play-dir"></span>
+                  <span class="play-dir"></span>
+                  <span class="play-dir"></span>
+                </div>
+
+                <div class="play-buttons">
+                  <button id="play-btn">Play</button>
+                  <button id="reset-btn">Reset</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Maths part -->
+          <div class="maths">
+            <div class="math-container">
+              <div class="math-questions">
+                <div class="math-block">1</div>
+                <div class="math-block-op">+</div>
+                <div class="math-block">3</div>
+                <div class="math-block-op">=</div>
+                <div class="math-block">4</div>
+              </div>
+
+              <div class="math-asnwer-opt">
+                <div class="math-block-answer">1</div>
+                <div class="math-block-answer">2</div>
+                <div class="math-block-answer">3</div>
+                <div class="math-block-answer">4</div>
+                <div class="math-block-answer">5</div>
+                <div class="math-block-answer">6</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="button-opts">
+            <button class="right-side-opt" id="logic-btn">Logic</button>
+            <!-- logic game -->
+            <!-- Math game -->
+
+            <button class="right-side-opt" id="math-btn">Maths</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="main-footer">Sesame</footer>
+
+    <script
+      src="https://kit.fontawesome.com/cda065bf16.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/puzzle.js"></script>
+    <script src="./assets/js/logic.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-nav {
+  background-color: green;
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  padding: 20px;
+  list-style: none;
+}
+
+.main-footer {
+  display: block;
+  background-color: green;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  height: 50px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.main-container .left-side {
+  border: 1px solid black;
+  height: fit-content;
+  min-height: 500px;
+  padding: 0;
+}
+
+.main-container .right-side {
+  border: 1px solid black;
+  height: fit-content;
+  min-height: 500px;
+}
+
+.right-side .button-opts {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+  width: fit-content;
+  gap: 0;
+  padding: 0;
+  background-color: aliceblue;
+}
+
+.right-side .button-opts .right-side-opt {
+  display: block;
+  background-color: lightgrey;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 3px 4px black;
+}
+
+.right-side .button-opts .right-side-opt:hover {
+  cursor: pointer;
+  background-color: green;
+  scale: 1.1;
+  transition: all 0.2s ease;
+}
+
+.right-side .button-opt-heading {
+  display: block;
+  text-align: center;
+  font-size: 21px;
+  font-weight: bold;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  border-bottom: 2px solid green;
+}

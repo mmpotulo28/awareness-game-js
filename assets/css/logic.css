@@ -17,9 +17,10 @@
   font-size: 20px;
   font-weight: bold;
   color: white;
+  margin-right: 10px;
 }
 
-.exit-btn {
+.exit-btn:hover {
   cursor: pointer;
   background-color: red;
 }
@@ -27,12 +28,13 @@
 .logic-container {
   display: flex;
   flex-direction: row;
-  border: 2px solid green;
-  background-color: grey;
+  border: 2px solid yellowgreen;
+  background-color: green;
   border-radius: 20px;
   gap: 10px;
   padding: 20px 20px 20px 0px;
   width: fit-content;
+  box-shadow: 4px 4px 4px black;
 }
 
 .logic-container .left-side-cont {

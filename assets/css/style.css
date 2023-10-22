@@ -3,14 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-image: url(https://wallpapercave.com/wp/wp4034594.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .main-nav {
   background-color: green;
+  background-position: center;  
+  background-size: cover;
+  background-repeat: no-repeat;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100vw;
   padding: 20px;
   list-style: none;
+  height: 80px;
+  overflow: hidden;
+
+}
+
+.main-nav ul li{
+  list-style: none;
+}
+
+.nav-image {
+  width: 200px;
+  height: 200px;
+  margin: auto;
+
+  margin-top: -80px;
 }
 
 .main-footer {
@@ -23,33 +47,38 @@
 }
 
 .main-container {
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(0, 128, 0, 0.63);
 }
 
 .main-container .left-side {
-  border: 1px solid black;
-  height: fit-content;
-  min-height: 500px;
-  padding: 0;
+  display: block;
+  width: fit-content;
+  height: 100%;
+  /* margin: ; */
 }
 
 .main-container .right-side {
-  border: 1px solid black;
-  height: fit-content;
-  min-height: 500px;
+  display: block;
+  width: fit-content;
+  height: 100%;
 }
 
 .right-side .button-opts {
   display: flex;
   margin: auto;
-  justify-content: center;
-  margin-top: 50px;
+  flex-direction: row;
   flex-wrap: wrap;
   width: fit-content;
-  gap: 0;
-  padding: 0;
-  background-color: aliceblue;
+  justify-content: center;
 }
 
 .right-side .button-opts .right-side-opt {
@@ -60,6 +89,8 @@
   margin: 20px;
   border-radius: 20px;
   box-shadow: 2px 3px 4px black;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .right-side .button-opts .right-side-opt:hover {
@@ -78,4 +109,112 @@
   width: 80%;
   margin: auto;
   border-bottom: 2px solid green;
+}
+
+/* create media query */
+@media screen and (max-width: 600px) {
+}
+
+@media screen and (max-width: 450px) {
+  .puzzle_board {
+    scale: 0.8;
+    margin: 0;
+  }
+
+  .main-container {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .main-container {
+    margin: 10px 0;
+    padding: 0;
+  }
+
+  .main-container .left-side {
+    margin: 0;
+    padding: 0;
+  }
+
+  .puzzle_cont {
+    margin: 0;
+    padding: 0;
+  }
+
+  .puzzle_board {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.winPopUp {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: green;
+  width: 80%;
+  height: 80%;
+  z-index: 100;
+  border-radius: 30px;
+  box-shadow: 2px 3px 4px black;
+  border: 2px solid yellowgreen;
+  top: 80px;
+}
+
+.winPopUp button {
+  display: block;
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: yellowgreen;
+  border: 2px solid yellowgreen;
+  box-shadow: 5px 5px px black;
+  margin-top: 50px;
+}
+
+.winPopUp button:hover {
+  cursor: pointer;
+  background-color: green;
+  scale: 1.1;
+  transition: all 0.2s ease;
+}
+
+.winPopUp h1 {
+  display: block;
+  font-size: 40px;
+  font-weight: bold;
+  color: yellowgreen;
+  margin: 10px;
+  padding: 10px;
+  border-bottom: 2px solid yellowgreen;
+}
+
+.winPopUp p {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
+.message {
+  display: inline-block;
+  border: 2px solid yellowgreen;
+  border-radius: 10px;
+  width: 50%;
+  height: fit-content;
+  box-shadow: 3px 3px 4px white;
+  padding: 30px;
+}
+
+.win-image {
+  display: inline-block;
+  width: 40%;
+  aspect-ratio: 1/1;
+  margin-left: 20px;
+  background-color: black;
 }

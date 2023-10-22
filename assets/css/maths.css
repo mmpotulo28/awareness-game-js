@@ -1,9 +1,13 @@
+.maths {
+  display: none;
+}
+
 .math-container {
   display: block;
   width: 100%;
   background-color: green;
-  height: 300px;
-  margin-top: 30px;
+  height: fit-content;
+  margin: 20px auto;
 }
 
 .math-questions {
@@ -11,7 +15,6 @@
   flex-direction: row;
   justify-content: center;
   gap: 10px;
-  border-bottom: 2px solid black;
 }
 
 .math-block {
@@ -24,6 +27,7 @@
   text-align: center;
   padding: 30px 20px;
   font-size: 30px;
+  background-size: 100% 100%;
 }
 
 .math-block-op {
@@ -40,22 +44,49 @@
 
 .math-asnwer-opt {
   display: flex;
+  margin: auto;
   margin-top: 20px;
   flex-direction: row;
   gap: 10px;
-  background-color: lightgreen;
+  background-color: white;
   overflow-y: hidden;
   overflow-x: auto;
+  width: 100%;
+  justify-content: center;
 }
 
-.math-block-answer{
-    display: block;
-    width: 70px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: lightgrey;
-    border-radius: 20px;
-    text-align: center;
-    padding: 30px 20px;
-    font-size: 30px;
+.math-block-answer {
+  display: block;
+  width: 90px;
+  height: 110px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: lightgrey;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px 20px;
+  font-size: 30px;
+  color: transparent;
+  background-size: 100% 100%;
+}
+
+.math-block-answer:hover {
+  cursor: pointer;
+  scale: 1.1;
+  box-shadow: 2xp 2px 5px green;
+}
+
+.exit-btn-math {
+  display: block;
+  background-color: rgb(0, 128, 6);
+  color: white;
+  font-size: 20px;
+  border-radius: 0 0 20px 20px;
+  padding: 2px 10px;
+  margin: auto;
+}
+
+.exit-btn-math:hover {
+  cursor: pointer;
+  background-color: red;
 }

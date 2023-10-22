@@ -13,14 +13,9 @@
     <header>
       <nav class="main-nav">
         <ul class="Logo">
-          <li>Logo</li>
-        </ul>
-        <ul class="nav-items">
-          <li><a href="index.php">Home</a></li>
-        </ul>
-        <ul class="user">
-          user
-        </ul>
+          <li>
+            <img src="./images/navbanner.png" class="nav-image" srcset="">
+          </li>
       </nav>
     </header>
 
@@ -124,32 +119,37 @@
           <!-- Maths part -->
           <div class="maths">
             <div class="math-container">
+              <button class="exit-btn-math" id="exit-math">B a c k</button>
               <div class="math-questions">
-                <div class="math-block">1</div>
-                <div class="math-block-op">+</div>
-                <div class="math-block">3</div>
-                <div class="math-block-op">=</div>
-                <div class="math-block">4</div>
+                <div class="math-block" id="num1-block"></div>
+                <div class="math-block-op" id="opr-block"></div>
+                <div class="math-block" id="num2-block"></div>
+                <div class="math-block-op" id="=">=</div>
+                <div class="math-block" id="result-block">?</div>
               </div>
 
               <div class="math-asnwer-opt">
-                <div class="math-block-answer">1</div>
-                <div class="math-block-answer">2</div>
-                <div class="math-block-answer">3</div>
-                <div class="math-block-answer">4</div>
-                <div class="math-block-answer">5</div>
-                <div class="math-block-answer">6</div>
+                <div class="math-block-answer" id="answer1"></div>
+                <div class="math-block-answer" id="answer2"></div>
+                <div class="math-block-answer" id="answer3"></div>
+                <div class="math-block-answer" id="answer4"></div>
               </div>
             </div>
           </div>
 
           <div class="button-opts">
             <button class="right-side-opt" id="logic-btn">Logic</button>
-            <!-- logic game -->
-            <!-- Math game -->
-
             <button class="right-side-opt" id="math-btn">Maths</button>
           </div>
+        </div>
+
+        <div class="winPopUp">
+          <h1 class="winPopUp-heading">Congratulations</h1>
+          <p class="winPopUp-text">You have solved the puzzle</p>
+          <div class="message">
+            <p class="message-text">meesage here</p>
+          </div>
+          <button class="winPopUp-btn" id="play-again">Play Again</button>
         </div>
       </div>
     </main>
@@ -160,8 +160,9 @@
       src="https://kit.fontawesome.com/cda065bf16.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./assets/js/main.js"></script>
-    <script src="./assets/js/puzzle.js"></script>
-    <script src="./assets/js/logic.js"></script>
+    <script type="module" src="./assets/js/main.js"></script>
+    <script type="module" src="./assets/js/puzzle.js"></script>
+    <script type="module" src="./assets/js/logic.js"></script>
+    <script type="module" src="./assets/js/maths.js"></script>
   </body>
 </html>

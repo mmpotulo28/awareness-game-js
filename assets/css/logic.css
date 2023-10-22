@@ -4,7 +4,8 @@
 
 .logic {
   display: none;
-  margin: 20px;
+  margin: 20px auto;
+  width: fit-content;
 }
 .exit-btn {
   display: block;

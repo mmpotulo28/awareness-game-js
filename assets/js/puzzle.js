@@ -1,3 +1,5 @@
+import * as maths from './maths.js';
+
 //query for puzzle pecies
 const puzzlePiece = document.querySelectorAll('.puzzle-peice');
 //puzzle container
@@ -7,6 +9,8 @@ const puzzleBoard = document.querySelector('.puzzle_board');
 const puzzleImage = document.querySelector('.puzzle-image');
 //reference to the win popup container
 const winPopup = document.querySelector('.win-container');
+
+var score = 0;
 
 //create array of puzzle images
 const images = [
@@ -139,6 +143,8 @@ function checkPuzzleOrder() {
 
     displayMessage()
 
+
+
     console.log(puzzleOrder)
 }
 
@@ -146,8 +152,15 @@ function checkPuzzleOrder() {
 const message = document.querySelector('.message');
 const winPopUp = document.querySelector('.winPopUp');
 const winImg = document.querySelector('.win-img');
+const allscore = document.querySelector('.allscore');
 
 function displayMessage() {
+
+    score = maths.mathScore;
+    console.log(score)
+
+    allscore.innerHTML = "Your Score is: " + score;
+
     winPopUp.style.display = 'flex';
     let puzzle5Message = `We all have the responsibility to teach, to teachers, we have the responsibility to learn, so we can keep the planet clean.`
 

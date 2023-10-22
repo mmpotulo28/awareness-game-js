@@ -21,6 +21,7 @@ var num2 = 0;
 var opr = '+';
 var result = 0;
 var correctAnswer = 0;
+export var mathScore = 0;
 
 var imgFolder = 'images/maths/'
 var mathsImages = ["0.jpg", "1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg"]
@@ -270,9 +271,12 @@ function selectAnswer(answer) {
     if (answer == result) {
         // alert("correct");
         console.log("correct" + answer)
+        mathScore++;
         puzzle.unscrambleRow();
         generateQuestion();
+
     } else {
+        mathScore--;
         console.log("wrong" + answer)
     }
 }

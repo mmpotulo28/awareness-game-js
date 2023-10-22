@@ -1,3 +1,5 @@
+import * as puzzle from './puzzle.js';
+
 const dirOptions = document.querySelectorAll('.logic-dir');
 const dirBoxex = document.querySelectorAll('.play-dir');
 const gridCells = document.querySelectorAll('.grid-cell');
@@ -18,36 +20,47 @@ let currentPattern = pattern1;
 
 //human object
 const humanObj = "<i class=\"fa-solid fa-child-reaching\"></i>";
+generateLogic();
 
-//randomize choose maize pattern
-let randomNum = Math.floor(Math.random() * 4);
-console.log("random: " + randomNum);
-if (randomNum == 0) {
-    currentPattern = pattern1;
-} else if (randomNum == 1) {
-    currentPattern = pattern2;
-} else if (randomNum == 2) {
-    currentPattern = patten3;
-} else {
-    currentPattern = pattern4;
+function generateLogic() {
+
+
+    //randomize choose maize pattern
+    let randomNum = Math.floor(Math.random() * 4);
+    console.log("random: " + randomNum);
+    if (randomNum == 0) {
+        currentPattern = pattern1;
+    } else if (randomNum == 1) {
+        currentPattern = pattern2;
+    } else if (randomNum == 2) {
+        currentPattern = patten3;
+    } else {
+        currentPattern = pattern4;
+    }
+
+    //set maize pattern on grid
+    gridCells.forEach((gridCell) => {
+        if (currentPattern.includes(parseInt(gridCell.id))) {
+            console.log(gridCell.id);
+            gridCell.style.backgroundColor = 'lightgrey';
+            gridCell.style.border = '1px solid grey';
+        } else {
+            gridCell.style.backgroundColor = 'transparent';
+            gridCell.style.border = 'none';
+        }
+    });
+
+    //set start cell
+    startCellId = currentPattern[0];
+    gridCells.forEach((gridCell) => {
+        if (gridCell.id == startCellId) {
+            gridCell.innerHTML = humanObj;
+        } else {
+            gridCell.classList.remove('active');
+            gridCell.innerHTML = '';
+        }
+    });
 }
-
-//set maize pattern on grid
-gridCells.forEach((gridCell) => {
-    if (currentPattern.includes(parseInt(gridCell.id))) {
-        console.log(gridCell.id);
-        gridCell.style.backgroundColor = 'lightgrey';
-        gridCell.style.border = '1px solid grey';
-    }
-});
-
-//set start cell
-startCellId = currentPattern[0];
-gridCells.forEach((gridCell) => {
-    if (gridCell.id == startCellId) {
-        gridCell.innerHTML = humanObj;
-    }
-});
 
 /************add choosen directions to the boxes********/
 dirOptions.forEach((dirOption) => {
@@ -79,6 +92,10 @@ playBtn.addEventListener('click', () => {
 
 //reset button
 resetBtn.addEventListener('click', () => {
+    resetLogic()
+});
+
+function resetLogic() {
     dirBoxArr = [];
     dirBoxex.forEach((dirBox) => {
         dirBox.innerHTML = '';
@@ -93,8 +110,14 @@ resetBtn.addEventListener('click', () => {
                 gridCell.innerText = '';
             }
         });
+
+        //clear path
+        gridCells.forEach((gridCell) => {
+            gridCell.style.backgroundColor = 'transparent';
+            gridCell.style.border = "none";
+        });
     });
-});
+}
 
 //play logic
 function playLogic(currentID, i) {
@@ -167,6 +190,9 @@ function move(currentID) {
 function checkForWin(currentID) {
     //check if the current cell is the last cell
     if (currentID == currentPattern[currentPattern.length - 1]) {
-        alert('You Win!');
+        puzzle.unscrambleRow();
+        resetLogic()
+
+        generateLogic()
     }
 }

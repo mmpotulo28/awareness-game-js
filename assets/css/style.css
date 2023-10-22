@@ -12,7 +12,7 @@ body {
 }
 .main-nav {
   background-color: green;
-  background-position: center;  
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -22,10 +22,9 @@ body {
   list-style: none;
   height: 80px;
   overflow: hidden;
-
 }
 
-.main-nav ul li{
+.main-nav ul li {
   list-style: none;
 }
 
@@ -38,7 +37,8 @@ body {
 }
 
 .main-footer {
-  display: block;
+  display: flex;
+  justify-content: center;
   background-color: green;
   position: fixed;
   bottom: 0;
@@ -155,12 +155,13 @@ body {
   position: absolute;
   background-color: green;
   width: 80%;
-  height: 80%;
+  min-height: 80%;
+  height: fit-content;
   z-index: 100;
   border-radius: 30px;
   box-shadow: 2px 3px 4px black;
   border: 2px solid yellowgreen;
-  top: 80px;
+  top: 100px;
 }
 
 .winPopUp button {
@@ -173,6 +174,8 @@ body {
   border: 2px solid yellowgreen;
   box-shadow: 5px 5px px black;
   margin-top: 50px;
+  width: 80px;
+  height: 50px;
 }
 
 .winPopUp button:hover {
@@ -180,6 +183,7 @@ body {
   background-color: green;
   scale: 1.1;
   transition: all 0.2s ease;
+  
 }
 
 .winPopUp h1 {

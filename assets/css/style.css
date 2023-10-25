@@ -42,11 +42,14 @@ body {
   background-color: green;
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: fit-content;
   justify-content: space-evenly;
   overflow: hidden;
   padding: 10px 0;
+  flex-wrap: wrap;
+  border-top: 3px solid yellowgreen;
+  border-radius: 20px 20px 0 0;
 }
 
 .main-container {
@@ -58,6 +61,7 @@ body {
   flex-wrap: wrap;
   padding: 50px 20px 100px 20px;
   width: fit-content;
+  min-width: 400px;
   height: fit-content;
   margin: auto;
   overflow: hidden;
@@ -75,6 +79,7 @@ body {
   display: block;
   width: fit-content;
   height: 100%;
+  overflow: hidden;
 }
 
 .right-side .button-opts {
@@ -83,6 +88,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   width: fit-content;
+  padding: 10px;
   justify-content: center;
 }
 
@@ -101,8 +107,11 @@ body {
 .right-side .button-opts .right-side-opt:hover {
   cursor: pointer;
   background-color: green;
+  border: 2px solid yellow;
+  color: white;
   scale: 1.1;
   transition: all 0.2s ease;
+  z-index: 100;
 }
 
 .right-side .button-opt-heading {
@@ -117,7 +126,11 @@ body {
 }
 
 /* create media query */
-@media screen and (max-width: 600px) {
+@media (max-width: 700px) {
+  .right-side .button-opts .right-side-opt {
+    display: inline-block;
+    margin: 10px 5px;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -157,16 +170,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   background-color: green;
   width: fit-content;
-  min-height: 80%;
+  max-width: 80%;
   height: fit-content;
-  z-index: 100;
+  /* max-height: 80%; */
+  z-index: 1000;
   border-radius: 30px;
   box-shadow: 2px 3px 4px black;
   border: 2px solid yellowgreen;
-  top: 100px;
+  top: 90px;
 }
 
 .winPopUp button {
@@ -181,12 +195,15 @@ body {
   margin-top: 50px;
   width: 80px;
   height: 50px;
+  color: black;
+  font-weight: bold;
 }
 
 .winPopUp button:hover {
   cursor: pointer;
   background-color: green;
-  scale: 1.1;
+  scale: 1.3;
+  color: white;
   transition: all 0.2s ease;
 }
 
@@ -211,11 +228,16 @@ body {
 
 .message {
   display: inline-block;
-  border: 2px solid yellowgreen;
+  border: 2px solid yellow;
   border-radius: 10px;
-  width: 50%;
+  width: 80%;
   height: fit-content;
-  box-shadow: 3px 3px 4px white;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 10%,
+    darkgreen 80%,
+    yellowgreen
+  );
   padding: 30px;
 }
 
@@ -255,7 +277,7 @@ body {
   width: auto;
   /* max-width: 200px; */
   height: 60px;
-  border-radius: 20px 0; 
+  border-radius: 20px 0;
   box-shadow: lightgreen 2px 2px 2px;
   margin: 10px 0;
   display: block;

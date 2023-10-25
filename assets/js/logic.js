@@ -103,7 +103,6 @@ function resetLogic() {
         //remove the active class from all the grid cells
         gridCells.forEach((gridCell) => {
             if (gridCell.id == startCellId) {
-
                 gridCell.innerHTML = humanObj;
             } else {
                 gridCell.classList.remove('active');
@@ -112,10 +111,7 @@ function resetLogic() {
         });
 
         //clear path
-        gridCells.forEach((gridCell) => {
-            gridCell.style.backgroundColor = 'transparent';
-            gridCell.style.border = "none";
-        });
+        generateLogic();
     });
 }
 

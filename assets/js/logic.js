@@ -24,7 +24,6 @@ generateLogic();
 
 function generateLogic() {
 
-
     //randomize choose maize pattern
     let randomNum = Math.floor(Math.random() * 4);
     console.log("random: " + randomNum);

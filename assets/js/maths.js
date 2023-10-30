@@ -49,7 +49,7 @@ function generateQuestion() {
     opr = generateRandomOperator();
     result = calculateResult();
 
-    if (result > 9 || result < 0) {
+    if (result > 9 || result < 0 || (num1 < num2 && opr == '/')) {
         return generateQuestion();
     } else {
 
